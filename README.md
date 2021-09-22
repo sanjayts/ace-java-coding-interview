@@ -22,3 +22,4 @@ We use:
 * assert4j for assertions
 * maven-shade plugin for creating an uber jar
 * surefire plugin for running tests with `./mvnw test`
+* spotbugs for static analysis; run automatically when every maven `test` or `install`
