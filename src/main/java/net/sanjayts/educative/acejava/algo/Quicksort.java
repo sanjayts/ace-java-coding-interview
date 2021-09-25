@@ -2,6 +2,9 @@ package net.sanjayts.educative.acejava.algo;
 
 import lombok.extern.slf4j.Slf4j;
 
+/*
+https://wiki2.org/en/Quicksort
+ */
 @Slf4j
 public class Quicksort {
 
