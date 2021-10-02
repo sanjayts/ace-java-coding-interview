@@ -14,6 +14,7 @@ public class Permutations {
         log.info("Permutations of array {} are {}", arr, out);
     }
 
+    // https://cheonhyangzhang.gitbooks.io/leetcode-solutions/content/46_permutations__medium.html
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new LinkedList<>();
         boolean[] visited = new boolean[nums.length];
