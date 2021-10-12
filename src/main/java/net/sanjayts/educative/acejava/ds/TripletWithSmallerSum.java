@@ -5,7 +5,11 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
 
+/*
+https://www.educative.io/module/lesson/data-structures-in-java/mEO2Xjk2Kyp
 
+https://leetcode.com/problems/3sum-smaller/
+ */
 @Slf4j
 public class TripletWithSmallerSum {
 
