@@ -2,6 +2,8 @@ package net.sanjayts.educative.acejava.ds;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import net.sanjayts.educative.acejava.util.TreeNode;
+
 import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -23,7 +25,7 @@ public class SerDeserBinaryTree {
 
     public static void dfsInorder() {
         DFSInorder dfsInorder = new DFSInorder();
-        TreeNode n = sampleTree();
+        TreeNode n = TreeNode.sampleTree();
         String data = dfsInorder.serialize(n);
         log.info("DFS Inorder - Binary representation of the tree is as follows: {}", data);
         TreeNode out = dfsInorder.deserialize(data);
@@ -32,7 +34,7 @@ public class SerDeserBinaryTree {
 
     public static void bfsOptimizedMain() {
         BFSSpaceOptimized bfsSpaceOptimized = new BFSSpaceOptimized();
-        TreeNode n = sampleTree();
+        TreeNode n = TreeNode.sampleTree();
         String data = bfsSpaceOptimized.serialize(n);
         log.info("BFS Optimal - Binary representation of the tree is as follows: {}", data);
         TreeNode out = bfsSpaceOptimized.deserialize(data);
@@ -41,18 +43,11 @@ public class SerDeserBinaryTree {
 
     public static void bfsNaiveMain() {
         BFSNaive bfsNaive = new BFSNaive();
-        TreeNode n = sampleTree();
+        TreeNode n = TreeNode.sampleTree();
         String data = bfsNaive.serialize(n);
         log.info("BFS Naive - Binary representation of the tree is as follows: {}", data);
         TreeNode out = bfsNaive.deserialize(data);
         log.info("{}", bfsNaive.treeEquals(n, out));
-    }
-
-    private static TreeNode sampleTree() {
-        return new TreeNode(1,
-                new TreeNode(2),
-                new TreeNode(3, null,
-                        new TreeNode(4)));
     }
 
     public boolean treeEquals(TreeNode n1, TreeNode n2) {
@@ -229,18 +224,3 @@ class BFSNaive extends SerDeserBinaryTree {
     }
 }
 
-class TreeNode {
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
-
-    public TreeNode(int val) {
-        this.val = val;
-    }
-
-    public TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
