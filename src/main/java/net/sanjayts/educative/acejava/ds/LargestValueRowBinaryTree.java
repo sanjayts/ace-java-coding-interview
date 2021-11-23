@@ -17,7 +17,7 @@ public class LargestValueRowBinaryTree {
         log.info("DFS output for largest values is {}", dfsOut);
 
         List<Integer> bfsOut = new BFS().largestValues(tree);
-        log.info("BFS output for largest values is {}", dfsOut);
+        log.info("BFS output for largest values is {}", bfsOut);
     }
 
 }
