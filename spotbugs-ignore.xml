@@ -1,0 +1,9 @@
+<FindBugsFilter>
+
+    <Match>
+        <Bug pattern="ES_COMPARING_PARAMETER_STRING_WITH_EQ"/>
+        <Class name="net.sanjayts.educative.acejava.ds.MergeAccounts"/>
+        <Method name="find"/>
+    </Match>
+
+</FindBugsFilter>

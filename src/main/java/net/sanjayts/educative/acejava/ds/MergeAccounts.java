@@ -125,9 +125,9 @@ public class MergeAccounts {
                 unions.get(p).add(acc.get(i));
             }
         }
-        for (var mail : unions.keySet()) {
-            var mails = new LinkedList<>(unions.get(mail));
-            mails.addFirst(mailToOwner.get(mail));
+        for (var e : unions.entrySet()) {
+            var mails = new LinkedList<>(e.getValue());
+            mails.addFirst(mailToOwner.get(e.getKey()));
             res.add(mails);
         }
         return res;
