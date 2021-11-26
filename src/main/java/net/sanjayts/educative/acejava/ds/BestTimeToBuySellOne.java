@@ -8,11 +8,6 @@ https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 @Slf4j
 public class BestTimeToBuySellOne {
 
-    public static void main(String[] args) {
-        int[] prices = new int[] {1, 5, 10, 2, 8};
-
-    }
-
     /**
      * To understand the intuition here, we need to restate the problem definition. It's all about tracking
      * the lowest buy price followed by the highest possible sell price. Basically keep searching for a buy
